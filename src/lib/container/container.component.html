@@ -1,0 +1,8 @@
+<div [ngClass]="{
+'bottom-right': snackBarOptions.position === 'BOTTOM_RIGHT',
+'top-left': snackBarOptions.position === 'TOP_LEFT', 
+'top-right': snackBarOptions.position === 'TOP_RIGHT', 
+'bottom-left': snackBarOptions.position === 'BOTTOM_LEFT'}"
+    id="container" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="5px">
+        <sb-bar @insertRemoveTrigger *ngFor="let snackBar of (snackBarService.snackBarState$ | async).snackBars" [model]="snackBar"></sb-bar>
+</div>
