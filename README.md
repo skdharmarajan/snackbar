@@ -2,13 +2,20 @@
  SnackBar is a service for displaying snack-bar notifications. On latest version of angular 7
 
 # Get Started
+
+   * #### Install
+     ```js
+     npm i ng7-snack-bar
+     ```
+
    * #### Import the **SnackBarModule**
      ```js
-     import { SnackBarModule } from 'snack-bar';
+     import { SnackBarModule } from 'ng7-snack-bar';
+     import { StoreModule } from '@ngrx/store';
 
      @NgModule({
        declarations: [AppComponent, ...],
-       imports: [SnackBarModule.forRoot(), ...],
+       imports: [SnackBarModule.forRoot(), StoreModule.forRoot([]), ...],
        bootstrap: [AppComponent]
      })
      export class AppModule {
@@ -21,7 +28,7 @@
 
    * #### Import the **SnackBarService to Needed Component**
    ```js
-   import { SnackBarService } from 'snack-bar';
+   import { SnackBarService } from 'ng7-snack-bar';
 
    constructor(
       private snackBarService: SnackBarService

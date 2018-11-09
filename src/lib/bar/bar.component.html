@@ -12,20 +12,20 @@
         <div fxLayout="row" class="bar-icon-h">
             <div fxFlex="24px" [ngClass]="{'success': isSuccess, 'warn': isWarn, 'error': isError, 'info': isInfo}"
                 fxLayout="column" fxLayoutAlign="center center" class="bar-icon">
-                <!--<sb-error-icon *ngIf="isError"></sb-error-icon>-->
-                <!--<sb-warn-icon *ngIf="isWarn"></sb-warn-icon>-->
-                <!--<sb-info-icon *ngIf="isInfo"></sb-info-icon>-->
-                <!--<sb-success-icon *ngIf="isSuccess"></sb-success-icon>-->
+                <sb-error-icon *ngIf="isError"></sb-error-icon>
+                <sb-warn-icon *ngIf="isWarn"></sb-warn-icon>
+                <sb-info-icon *ngIf="isInfo"></sb-info-icon>
+                <sb-success-icon *ngIf="isSuccess"></sb-success-icon>
             </div>
         </div>
         <div class="define" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="5px">
             <div fxLayout="row" fxLayoutAlign="start center" class="action">
                 <div *ngIf="isClose">
-                    <!--<sb-close-icon class="close-btn" (click)="onClose()"></sb-close-icon>-->
+                    <sb-close-icon class="close-btn" (click)="onClose()"></sb-close-icon>
                 </div>
                 <div *ngIf="isDetail">
-                    <!--<sb-expand-icon *ngIf="!isShowContent" class="detail-btn" (click)="onToggleDetail()"></sb-expand-icon>-->
-                    <!--<sb-collapse-icon *ngIf="isShowContent" class="detail-btn" (click)="onToggleDetail()"> </sb-collapse-icon>-->
+                    <sb-expand-icon *ngIf="!isShowContent" class="detail-btn" (click)="onToggleDetail()"></sb-expand-icon>
+                    <sb-collapse-icon *ngIf="isShowContent" class="detail-btn" (click)="onToggleDetail()"> </sb-collapse-icon>
                 </div>
                 <div>
                     &nbsp;
@@ -41,7 +41,7 @@
             
             <div class="sub-header" fxLayout="column" fxLayoutGap="5px">
                <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="5px" *ngFor="let content of model.contents">
-                   <!--<sb-square-icon class="icon"></sb-square-icon>-->
+                   <sb-square-icon class="icon"></sb-square-icon>
                    <div>{{content}}</div>
                </div>
             </div>
