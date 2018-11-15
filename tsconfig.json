@@ -16,6 +16,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ng7-snack-bar": [
+        "dist/ng7-snack-bar"
+      ],
+      "ng7-snack-bar/*": [
+        "dist/ng7-snack-bar/*"
+      ]
+    }
   }
 }
