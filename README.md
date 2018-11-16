@@ -3,6 +3,8 @@
 
 # Get Started
 
+   * ##### Please create issues or add suggestions, I am actively working on this module.
+
    * ##### Install
      ```js
      npm i ng7-snack-bar
@@ -106,4 +108,5 @@
   ##### Will add shortly, stay tuned
 
 # UpComing Feature 2.0.0
-  ##### Will add shortly, stay tuned
+  * More templates.
+  * New ways to intract with user.
