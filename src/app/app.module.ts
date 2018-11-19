@@ -1,11 +1,11 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
 
-import { SnackBarModule } from 'ng7-snack-bar';
-import { StoreModule } from '@ngrx/store';
+import {StoreModule} from "@ngrx/store";
+import {SnackBarModule, TemplateType} from "ng7-snack-bar";
 
 @NgModule({
   declarations: [
@@ -14,7 +14,14 @@ import { StoreModule } from '@ngrx/store';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SnackBarModule.forRoot(), StoreModule.forRoot([]),
+    SnackBarModule.forRoot({
+      template: TemplateType.CLASSIC,
+      infoOptions: {
+        isClose: true,
+        isDetail: true,
+      }
+    }),
+    StoreModule.forRoot([])
   ],
   providers: [],
   bootstrap: [AppComponent]

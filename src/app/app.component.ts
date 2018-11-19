@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SnackBarService } from 'ng7-snack-bar';
+import {SnackBarService} from "ng7-snack-bar";
 
 @Component({
   selector: 'app-root',
@@ -16,12 +16,12 @@ export class AppComponent {
 
   showNotification(): void {
     // Info
-    this.snackBarService.info('title', 'content', 'detail');
-    // Success
+    this.snackBarService.info('', 'content is too long to match the rule types and details content is too long to match the rule types and details content is too long to match the rule types and details content is too long to match the rule types and details content is too long to match the rule types and details', 'detail');
+    // // Success
     this.snackBarService.success('title', 'content', 'detail');
-    // Warn
-    this.snackBarService.warn('title', 'content', 'detail');
-    // Error
-    this.snackBarService.error('title', 'content', 'detail');
+    // // Warn
+    // this.snackBarService.warn('title', 'content', 'detail');
+    // // Error
+    // this.snackBarService.error('title', 'content', 'detail');
   }
 }

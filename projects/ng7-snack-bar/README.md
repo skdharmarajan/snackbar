@@ -1,11 +1,16 @@
-# Snackbar
- SnackBar is a service for displaying snack-bar notifications. On latest version of angular 7
+# Snackbar For ANGULAR 5/6/7
+ SnackBar is a service for displaying snack-bar notifications. On latest version of angular 5/6/7
 
 # Get Started
+
+   * ##### Please create issues or add suggestions, I am actively working on this module.
+   
+   * Setup Code https://stackblitz.com/edit/angular-4hvr9p
 
    * ##### Install
      ```js
      npm i ng7-snack-bar
+     npm i @ngx/store
      ```
 
    * ##### Import the **SnackBarModule**
@@ -90,17 +95,16 @@
   ##### Will add shortly, stay tuned
 
 # Dependencies
-  * @angular/common                   - 7.0.0
-  * @angular/core                     - 7.0.0
-  * @angular/animations               - 7.0.0
-  * @angular/flex-layout              - 7.0.0-beta.19
-  * @angular/platform-browser         - 7.0.0
-  * @angular/router                   - 7.0.0
-  * @fortawesome/angular-fontawesome  - 0.3.0
-  * @fortawesome/fontawesome-svg-core - 1.2.8
-  * @fortawesome/free-solid-svg-icons - 5.5.0
-  * @ngrx/store                       - 6.1.0
-  *  rxjs                             - 6.3.3
+  * @angular/common                   - >=5.0.0
+  * @angular/core                     - >=5.0.0
+  * @angular/animations               - >=5.0.0
+  * @angular/platform-browser         - >=5.0.0
+  * @angular/router                   - >=5.0.0
+  * @fortawesome/angular-fontawesome  - >=0.3.0
+  * @fortawesome/fontawesome-svg-core - >=1.2.8
+  * @fortawesome/free-solid-svg-icons - >=5.5.0
+  * @ngrx/store                       - >=5.0.0
+  *  rxjs                             - >=5.5.2
 
 # Live
   ##### Will add shortly, stay tuned

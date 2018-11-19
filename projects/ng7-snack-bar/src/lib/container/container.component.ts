@@ -1,7 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
-// tslint:disable-next-line:import-blacklist
 import { Subscription } from 'rxjs';
 import { SnackBarType } from '../snack-bar.action';
 import { ISnackBarOptions, ISnackBarState } from '../snack-bar.model';
