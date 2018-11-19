@@ -10,7 +10,7 @@
    * ##### Install
      ```js
      npm i ng7-snack-bar
-     npm i @ngx/store
+     npm i @ngrx/store
      ```
 
    * ##### Import the **SnackBarModule**
