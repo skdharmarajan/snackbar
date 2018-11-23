@@ -40,13 +40,12 @@
 
         <div class="sub-header">
           <div class="content" *ngFor="let content of model.contents">
-            <sb-square-icon class="icon"></sb-square-icon>
             <div class="actual-content">{{content}}</div>
           </div>
         </div>
       </div>
     </div>
-    <div @showContentDetail class="detail" *ngIf="isShowContent" [ngClass]="{
+    <div @showContentTrigger class="detail" *ngIf="isShowContent" [ngClass]="{
         'success-t-b': isSuccess, 
         'warn-t-b': isWarn, 
         'error-t-b': isError, 

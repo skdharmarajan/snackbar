@@ -5,7 +5,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 
 import {StoreModule} from "@ngrx/store";
-import {SnackBarModule, TemplateType} from "ng7-snack-bar";
+import {GroupRuleType, SnackBarModule, TemplateType} from "ng7-snack-bar";
 
 @NgModule({
   declarations: [
@@ -15,8 +15,9 @@ import {SnackBarModule, TemplateType} from "ng7-snack-bar";
     BrowserModule,
     AppRoutingModule,
     SnackBarModule.forRoot({
-      template: TemplateType.CLASSIC,
-      infoOptions: {
+      template: TemplateType.DARK,
+      groupRuleType: GroupRuleType.BASED_ON_TYPE,
+      successOptions: {
         isClose: true,
         isDetail: true,
       }

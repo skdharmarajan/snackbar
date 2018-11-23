@@ -15,8 +15,6 @@ export class AppComponent {
   }
 
   showNotification(): void {
-    // Info
-    this.snackBarService.info('', 'content is too long to match the rule types and details content is too long to match the rule types and details content is too long to match the rule types and details content is too long to match the rule types and details content is too long to match the rule types and details', 'detail');
     // // Success
     this.snackBarService.success('title', 'content', 'detail');
     // // Warn
