@@ -4,15 +4,11 @@ import { SnackBarType } from '../snack-bar.action';
 import { BarType, TemplateType } from '../snack-bar.enum';
 import { IBarOptions, ISnackBar, ISnackBarOptions, ISnackBarState } from '../snack-bar.model';
 import { SnackBarService } from '../snack-bar.service';
-import { ACCORDION_ANIMATION } from '../animations/animations';
 
 @Component({
     selector: 'sb-bar',
     templateUrl: './bar.component.html',
     styleUrls: ['./bar.component.scss'],
-    animations: [
-        ACCORDION_ANIMATION
-    ],
 })
 export class BarComponent implements OnInit {
     @Input() model: ISnackBar;

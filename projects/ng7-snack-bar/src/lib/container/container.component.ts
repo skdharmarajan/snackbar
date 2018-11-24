@@ -7,15 +7,11 @@ import { ISnackBarOptions, ISnackBarState } from '../snack-bar.model';
 import { SnackBarService } from '../snack-bar.service';
 
 import { filter } from 'rxjs/operators';
-import { SHOW_OR_HIDE_BAR_ANIMATION_FADE_IN } from '../animations/animations';
 
 @Component({
     selector: 'sb-container',
     templateUrl: './container.component.html',
     styleUrls: ['./container.component.scss'],
-    animations: [
-        SHOW_OR_HIDE_BAR_ANIMATION_FADE_IN,
-    ],
 })
 export class ContainerComponent implements OnInit, OnDestroy {
     public snackBarOptions: ISnackBarOptions;

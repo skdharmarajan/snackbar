@@ -2,7 +2,6 @@ import { CommonModule } from '@angular/common';
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { StoreModule } from '@ngrx/store';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { BarComponent } from './bar/bar.component';
 import { ContainerComponent } from './container/container.component';
@@ -33,7 +32,6 @@ import { SquareIconComponent } from './icons/square.icon';
     ],
     imports: [
         CommonModule,
-        BrowserAnimationsModule,
         FontAwesomeModule,
         StoreModule.forFeature('snackBarState', snackBarReducer),
     ],
