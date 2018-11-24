@@ -5,15 +5,11 @@ $info-color: #0D62B4;
 
 :host {
   padding-bottom: 4px;
-  display: flex;
-  flex: 1;
-  min-height: 75px;
 }
 
 #barPanel {
   display: flex;
   flex-direction: column;
-  min-height: 50px;
 }
 
 .bar-container {
@@ -71,6 +67,7 @@ $info-color: #0D62B4;
 
 .count {
     font-size: 10px;
+    padding: 2px;
 }
 
 .sub-header {
@@ -84,8 +81,8 @@ $info-color: #0D62B4;
       flex-direction: row;
       justify-items: start;
       justify-content: start;
-      align-content: center;
-      align-items: center;
+      align-content: start;
+      align-items: start;
     }
     
     .icon {
@@ -94,9 +91,19 @@ $info-color: #0D62B4;
         padding-right: 5px;
     }
 
+    .actual-content {
+      padding-bottom: 2px;
+    }
+
     .actual-content::first-letter {
       text-transform: uppercase;
     }
+}
+
+.bullet-icon {
+  padding-right: 5px;
+  padding-top: 2px;
+  font-size: 6px;
 }
 
 .define {
@@ -125,6 +132,15 @@ $info-color: #0D62B4;
     padding: 5px;
     font-size: 12px;
 
+  .detail-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    justify-items: start;
+    align-items: center;
+    align-content: center;
+  }
+
   .detail-content::first-letter {
     text-transform: uppercase;
   }
@@ -152,7 +168,7 @@ $info-color: #0D62B4;
 }
 
 .bar-icon {
-    font-size: 15px;
+    font-size: 16px;
     color: white;
     min-height: 60px;
     height: 100%;

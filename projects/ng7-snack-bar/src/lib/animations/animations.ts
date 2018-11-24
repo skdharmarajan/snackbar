@@ -2,11 +2,16 @@ import { trigger, transition, style, animate, query, group, animateChild } from 
 
 export const ACCORDION_ANIMATION = trigger('showContentTrigger', [
     transition(':enter', [
+        query('*', style({ opacity: 0 })),
         style({ height: '0' }),
-        animate('.2s', style({ height: '*' }))
+        animate('.2s', style({ height: '*' })),
+        query('*', animate('1ms', style({ opacity: 1 }))),
+        animateChild()
     ]),
     transition(':leave', [
-        animate('.2s', style({ height: '0' }))
+        query('*', style({ opacity: 0 })),
+        animate('.2s', style({ height: '0' })),
+        animateChild()
     ]),
 ]);
 
@@ -17,22 +22,6 @@ export const SHOW_OR_HIDE_BAR_ANIMATION_FADE_IN = trigger('insertRemoveTrigger',
     ]),
     transition(':leave', [
         animate('.5s', style({ opacity: 0 }))
-    ]),
-]);
-
-export const ROUTE_ANIMATION = trigger('routeAnimation', [
-    transition('* <=> *', [
-        group([
-            query(':enter', [
-                style({ opacity: 0 }),
-                animate('0.5s', style({ opacity: 1 })),
-                animateChild()
-            ]),
-            query(':leave', [
-                animate('0.5s', style({ opacity: 0 })),
-                animateChild()
-            ])
-        ])
     ]),
 ]);
 

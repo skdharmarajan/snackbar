@@ -1,16 +1,39 @@
-# Snackbar For ANGULAR 5/6/7
- SnackBar is a service for displaying snack-bar notifications. On latest version of angular 5/6/7
+<div>
+  <div>
+    <div>DARK</div>
+    <img src="https://skdharmarajan.github.io/snackbar/src/assets/img/Dark_Info.png" width="300" />
+  </div>
+  <div>
+    <div>CLASSIC</div>
+    <img src="https://skdharmarajan.github.io/snackbar/src/assets/img/Classic_Info.png" width="300" />
+  </div>
+</div>
+
+# Snackbar For ANGULAR 4/5/6/7
+ SnackBar is a service for displaying snack-bar notifications. On latest version of angular 5/6/7.
+ * Group snackbar based on Type, Content.
+ * Rank snackbar.
+ 
+# Versions
+| ng7-snack-bar   | Angular |
+| ------------    | ------- |
+| 1.6.0           | 4.x     |
+| 1.7.0           | 5.x     |
+| 1.7.0           | 6.x     |
+| 1.7.0           | 7.x     |
 
 # Get Started
 
    * ##### Please create issues or add suggestions, I am actively working on this module.
    
-   * Setup Code https://stackblitz.com/edit/angular-4hvr9p
+   * Setup Code https://stackblitz.com/edit/ng7-snack-bar
+   * Demo https://ng7-snack-bar.stackblitz.io
 
    * ##### Install
      ```js
-     npm i ng7-snack-bar
-     npm i @ngrx/store
+     npm install ng7-snack-bar --save
+     npm install @ngrx/store --save
+     npm install @angular/animations --save (Only for angular >=5.X )
      ```
 
    * ##### Import the **SnackBarModule**
@@ -91,23 +114,8 @@
      * *Auto close the notification based on the specified interval*
 
 
-# Screenshots
-  ##### Will add shortly, stay tuned
-
-# Dependencies
-  * @angular/common                   - >=5.0.0
-  * @angular/core                     - >=5.0.0
-  * @angular/animations               - >=5.0.0
-  * @angular/platform-browser         - >=5.0.0
-  * @angular/router                   - >=5.0.0
-  * @fortawesome/angular-fontawesome  - >=0.3.0
-  * @fortawesome/fontawesome-svg-core - >=1.2.8
-  * @fortawesome/free-solid-svg-icons - >=5.5.0
-  * @ngrx/store                       - >=5.0.0
-  *  rxjs                             - >=5.5.2
-
 # Live
-  ##### Will add shortly, stay tuned
+  * Demo https://ng7-snack-bar.stackblitz.io
 
 # UpComing Feature 2.0.0
   ##### Will add shortly, stay tuned
