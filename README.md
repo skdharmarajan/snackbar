@@ -9,7 +9,7 @@
   </div>
 </div>
 
-# Snackbar For ANGULAR 5/6/7
+# Snackbar For ANGULAR 4/5/6/7
  SnackBar is a service for displaying snack-bar notifications. On latest version of angular 5/6/7.
  * Group snackbar based on Type, Content.
  * Rank snackbar.

@@ -40,6 +40,7 @@
 
         <div class="sub-header">
           <div class="content" *ngFor="let content of model.contents">
+            <sb-square-icon class="bullet-icon" *ngIf="model.contents.length > 1"></sb-square-icon>
             <div class="actual-content">{{content}}</div>
           </div>
         </div>
@@ -52,7 +53,8 @@
         'info-t-b': isInfo,
         'dark-t-b': isDark
         }">
-        <div *ngFor="let item of model.details">
+        <div class="detail-container" *ngFor="let item of model.details">
+            <sb-square-icon class="bullet-icon" *ngIf="model.details.length > 1"></sb-square-icon>
             <div class="detail-content">{{item}}</div>
         </div>
     </div>
