@@ -7,14 +7,14 @@
 
    * ##### Please create issues or add suggestions, I am actively working on this module.
    
-   * Setup Code https://stackblitz.com/edit/angular-4hvr9p
-   * Demo https://angular-4hvr9p.stackblitz.io
+   * Setup Code https://stackblitz.com/edit/ng7-snack-bar
+   * Demo https://ng7-snack-bar.stackblitz.io
 
    * ##### Install
      ```js
      npm install ng7-snack-bar --save
      npm install @ngrx/store --save
-     npm install @angular/animation --save
+     npm install @angular/animations --save
      ```
 
    * ##### Import the **SnackBarModule**
@@ -96,7 +96,7 @@
 
 
 # Live
-  * Demo https://angular-4hvr9p.stackblitz.io
+  * Demo https://ng7-snack-bar.stackblitz.io
 
 # UpComing Feature 2.0.0
   ##### Will add shortly, stay tuned
