@@ -2,12 +2,12 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Subscription } from 'rxjs';
-import { SnackBarType } from '../snack-bar.action';
 import { ISnackBarOptions, ISnackBarState } from '../snack-bar.model';
 import { SnackBarService } from '../snack-bar.service';
 
 import { filter } from 'rxjs/operators';
 import { SHOW_OR_HIDE_BAR_ANIMATION_FADE_IN } from '../animations/animations';
+import {SnackBarType} from "../snack-bar.enum";
 
 @Component({
     selector: 'sb-container',

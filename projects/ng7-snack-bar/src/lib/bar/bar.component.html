@@ -10,7 +10,7 @@
     }">
     <div class="bar-container">
       <div class="bar-icon-h">
-        <div class="bar-icon" [ngClass]="{'success': isSuccess, 'warn': isWarn, 'error': isError, 'info': isInfo}">
+        <div class="bar-icon">
           <sb-error-icon *ngIf="isError"></sb-error-icon>
           <sb-warn-icon *ngIf="isWarn"></sb-warn-icon>
           <sb-info-icon *ngIf="isInfo"></sb-info-icon>

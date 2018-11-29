@@ -1,6 +1,6 @@
 {
   "name": "ng7-snack-bar",
-  "version": "1.7.1",
+  "version": "1.7.5",
   "homepage": "https://github.com/skdharmarajan/snackbar",
   "description": "SnackBar is a service for displaying snack-bar notifications. On latest version of angular 7",
   "author": {
@@ -23,11 +23,11 @@
     "url": "https://github.com/skdharmarajan/snackbar/issues"
   },
   "dependencies": {
-    "@angular/common": ">=4.0.0",
-    "@angular/core": ">=4.0.0",
-    "@angular/animations": ">=4.0.0",
-    "@angular/platform-browser": ">=4.0.0",
-    "@angular/router": ">=4.0.0",
+    "@angular/common": ">=4.4.7",
+    "@angular/core": ">=4.4.7",
+    "@angular/animations": ">=4.4.7",
+    "@angular/platform-browser": ">=4.4.7",
+    "@angular/router": ">=4.4.7",
     "@fortawesome/angular-fontawesome": ">=0.3.0",
     "@fortawesome/fontawesome-svg-core": ">=1.2.6",
     "@fortawesome/free-solid-svg-icons": ">=5.4.1",

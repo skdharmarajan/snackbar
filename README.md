@@ -1,4 +1,4 @@
-<div>
+<div style="display: flex; flex-direction:row">
   <div>
     <div>DARK</div>
     <img src="https://skdharmarajan.github.io/snackbar/src/assets/img/Dark_Info.png" width="300" />
@@ -8,19 +8,25 @@
     <img src="https://skdharmarajan.github.io/snackbar/src/assets/img/Classic_Info.png" width="300" />
   </div>
 </div>
+<div style="display: flex; flex-direction:row">
+  <div>
+    <div>DETAIL WITH TYPE GROUPING</div>
+    <img src="https://skdharmarajan.github.io/snackbar/src/assets/img/Dark_Error.png" width="300" />
+  </div>
+</div>
 
 # Snackbar For ANGULAR 4/5/6/7
- SnackBar is a service for displaying snack-bar notifications. On latest version of angular 5/6/7.
+ SnackBar is a service for displaying snack-bar notifications. On latest version of angular 4/5/6/7.
  * Group snackbar based on Type, Content.
  * Rank snackbar.
  
 # Versions
-| ng7-snack-bar     | Angular |
-| ------------      | ------- |
-| >=1.6.0<1.7.0     | 4.x     |
-| >=1.7.X           | 5.x     |
-| >=1.7.X           | 6.x     |
-| >=1.7.X           | 7.x     |
+| ng7-snack-bar   | Angular |
+| ------------    | ------- |
+| 1.6.0           | 4.x     |
+| 1.7.0           | 5.x     |
+| 1.7.0           | 6.x     |
+| 1.7.0           | 7.x     |
 
 # Get Started
 
@@ -78,40 +84,27 @@
 
 
 # Features
-  * 4 States
-     * *INFO*
-     * *SUCCESS*
-     * *WARN*
-     * *ERROR*
-
-  * 4 Positions
-     * *TOP LEFT*
-     * *TOP RIGHT*
-     * *BOTTOM LEFT*
-     * *BOTTOM RIGHT*
-
-  * 2 Templates
-     * *Classic*
-     * *Dark*
-
-  * 2 Grouping Rules
-     * *Based on Type - Combines the notifications based on type*
-     * *Based on Content - Combines the notifications based on content*
-
-  * AutoCloseOnTransition
-     * *Auto closes all the notification based on route*
-
-  * Rank Notifications
-     * *Ability to rank the 4 notification states*
-
-  * Detail Panel
-     * *Can show additional details using expand and collapse*
-
-  * Close Panel
-     * *Close the notifications on demand*
-
-  * Auto Close
-     * *Auto close the notification based on the specified interval*
+  | OPTION                 | TYPE              | DEFAULT                         | DESCRIPTION                               |
+  |------------------------|-------------------|---------------------------------|-------------------------------------------|
+  | position               | PositionType      | **BOTTOM_RIGHT**                | 4 Positions, to show the snack-bar        | 
+  | maxNoOfSnackBar        | number            | **10**                          | Displays max no of snackbar               |
+  | autoCloseOnTransition  | boolean           | **false**                       | Auto closes when page route occurs        |
+  | template               | TemplateType      | **CLASSIC**                     | Classic/Dark templates                    | 
+  | groupRuleType          | GroupRuleType     | **NO_RULE**                     | Groups the snack-bar based on type/content|
+  | rankBars               | Array<BarType>    | **[]**                          | Based on rank the snackbar displays       |
+  | infoOptions            | IBarOptions       |                                 | Configure Info snackbar                   |
+  | successOptions         | IBarOptions       |                                 | Configure Success snackbar                |
+  | warnOptions            | IBarOptions       |                                 | Configure Warn snackbar                   |
+  | errorOptions           | IBarOptions       |                                 | Configure Error snackbar                  |
+  
+# Additional Snackbar Configuration
+  | OPTION                 | TYPE              | DEFAULT                         | DESCRIPTION                               |
+  |------------------------|-------------------|---------------------------------|-------------------------------------------|
+  | isClose                | boolean           | false                           | Shows/Hides the close button              |
+  | closeTimeOut           | number            | 0                               | Autoclose after specified interval        |
+  | isDetail               | boolean           | false                           | Shows/Hides the detail button             |
+  | panelClass             | string            |                                 | Overrides the specific snackbar class     |
+  | opacity                | number            | 1                               | Specifies the opacity of snackbar         |
 
 
 # Live
