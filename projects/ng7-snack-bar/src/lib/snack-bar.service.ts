@@ -1,9 +1,7 @@
 import { Inject, Injectable } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Observable, Subscription } from 'rxjs';
-import { SnackBarType } from './snack-bar.action';
-import { BarType } from './snack-bar.enum';
+import {BarType, SnackBarType} from './snack-bar.enum';
 import { INITIAL_ISNACKBAR_OPTIONS, ISNACKBAR_OPTIONS, ISnackBarOptions, ISnackBarState } from './snack-bar.model';
 
 const TIMEOUT = 100;
@@ -13,7 +11,6 @@ export class SnackBarService {
     constructor(
         @Inject(ISNACKBAR_OPTIONS) private snackBarOptions: ISnackBarOptions,
         private store$: Store<any>,
-        private router: Router,
     ) {
         this.config();
     }

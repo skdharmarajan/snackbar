@@ -1,6 +1,15 @@
-import { trigger, transition, style, animate, query, group, animateChild } from '@angular/animations';
+import {
+  trigger,
+  transition,
+  style,
+  animate,
+  query,
+  group,
+  animateChild,
+  AnimationTriggerMetadata
+} from '@angular/animations';
 
-export const ACCORDION_ANIMATION = trigger('showContentTrigger', [
+export const ACCORDION_ANIMATION: AnimationTriggerMetadata = trigger('showContentTrigger', [
     transition(':enter', [
         query('*', style({ opacity: 0 })),
         style({ height: '0' }),
@@ -15,7 +24,7 @@ export const ACCORDION_ANIMATION = trigger('showContentTrigger', [
     ]),
 ]);
 
-export const SHOW_OR_HIDE_BAR_ANIMATION_FADE_IN = trigger('insertRemoveTrigger', [
+export const SHOW_OR_HIDE_BAR_ANIMATION_FADE_IN: AnimationTriggerMetadata = trigger('insertRemoveTrigger', [
     transition(':enter', [
         style({ opacity: 0 }),
         animate('.5s', style({ opacity: 1 }))

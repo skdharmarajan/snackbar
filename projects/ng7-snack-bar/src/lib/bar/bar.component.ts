@@ -1,10 +1,9 @@
-import { Component, Input, OnInit, ElementRef, ViewChild } from '@angular/core';
-import { Store } from '@ngrx/store';
-import { SnackBarType } from '../snack-bar.action';
-import { BarType, TemplateType } from '../snack-bar.enum';
-import { IBarOptions, ISnackBar, ISnackBarOptions, ISnackBarState } from '../snack-bar.model';
-import { SnackBarService } from '../snack-bar.service';
-import { ACCORDION_ANIMATION } from '../animations/animations';
+import {Component, ElementRef, Input, OnInit, ViewChild, ViewEncapsulation} from '@angular/core';
+import {Store} from '@ngrx/store';
+import {BarType, SnackBarType, TemplateType} from '../snack-bar.enum';
+import {IBarOptions, ISnackBar, ISnackBarOptions, ISnackBarState} from '../snack-bar.model';
+import {SnackBarService} from '../snack-bar.service';
+import {ACCORDION_ANIMATION} from '../animations/animations';
 
 @Component({
     selector: 'sb-bar',

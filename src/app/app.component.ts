@@ -16,14 +16,14 @@ export class AppComponent {
 
   showNotification(): void {
     // // Success
-    this.snackBarService.success('title', 'First Content. Testing out the scroll bar functionality on content section. This functionality is very difficult to test.', 'detail');
+    this.snackBarService.error('title', 'First Content. Testing out the scroll bar functionality on content section. This functionality is very difficult to test.', 'detail');
     // // Warn
     // this.snackBarService.warn('title', 'content', 'detail');
     // // Error
     // this.snackBarService.error('title', 'content', 'detail');
 
     setTimeout(() => {
-      this.snackBarService.success('title', 'Second Content. Testing out the scroll bar functionality on content section', 'Second detail');
+      this.snackBarService.error('title', 'Second Content. Testing out the scroll bar functionality on content section', 'Second detail');
       // this.snackBarService.success('title', 'Second Content. Testing out the scroll bar functionality on content section', 'Second detail');
       // this.snackBarService.success('title', 'Second Content. Testing out the scroll bar functionality on content section', 'Second detail');
     }, 4000)

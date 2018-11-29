@@ -1,6 +1,7 @@
-import { SnackBarAction, SnackBarType } from './snack-bar.action';
+import { SnackBarAction } from './snack-bar.action';
 import { INITIAL_SNACK_BAR_STATE, ISnackBarState } from './snack-bar.model';
 import { runSnackBarRules } from './rule/rule';
+import {SnackBarType} from "./snack-bar.enum";
 
 export function snackBarReducer(state: ISnackBarState = INITIAL_SNACK_BAR_STATE, action: SnackBarAction): ISnackBarState {
     switch (action.type) {
