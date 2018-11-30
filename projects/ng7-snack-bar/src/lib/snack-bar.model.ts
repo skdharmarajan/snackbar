@@ -22,6 +22,10 @@ export interface IBarOptions {
     opacity?: number;
 }
 
+export interface ISnackBarConfig {
+  isBackDrop?: boolean;
+}
+
 export interface ISnackBar {
     id: number;
     title: string;
@@ -33,6 +37,7 @@ export interface ISnackBar {
     count: number;
     closeTimeOut: number;
     actions: ISnackBarAction[];
+    options: ISnackBarConfig;
 }
 
 export interface ISnackBarState {

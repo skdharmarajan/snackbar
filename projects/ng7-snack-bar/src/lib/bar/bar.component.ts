@@ -4,7 +4,6 @@ import {BarType, SnackBarType, TemplateType} from '../snack-bar.enum';
 import {IBarOptions, ISnackBar, ISnackBarAction, ISnackBarOptions, ISnackBarState} from '../snack-bar.model';
 import {SnackBarService} from '../snack-bar.service';
 import {ACCORDION_ANIMATION} from '../animations/animations';
-import {isNullOrUndefined} from "util";
 
 @Component({
     selector: 'sb-bar',
@@ -19,6 +18,7 @@ export class BarComponent implements OnInit {
 
     public isShowContent: boolean;
     private snackBarOptions: ISnackBarOptions;
+    private backDropDiv: any;
 
     @ViewChild('barPanel') barPanelCtrl: ElementRef;
     constructor(
@@ -31,10 +31,12 @@ export class BarComponent implements OnInit {
     ngOnInit(): void {
         this.letsAutoCloseBar();
         this.applyPanelClass();
+        this.addBackDrop();
     }
 
     onClose(): void {
         this.store$.dispatch({ type: SnackBarType.REMOVE_SNACKBAR_ON_CLOSE, payload: this.model });
+        this.removeBackDrop();
     }
 
     onToggleDetail(): void {
@@ -42,8 +44,10 @@ export class BarComponent implements OnInit {
     }
 
     onAction(action: ISnackBarAction): void {
-        this.autoCloseOnAction(action.isAutoClose);
-        this.executeCallBack(action.callback);
+       setTimeout(() => {
+         this.autoCloseOnAction(action.isAutoClose);
+         this.executeCallBack(action.callback);
+       }, 250);
     }
 
     private autoCloseOnAction(isAutoClose: boolean): void {
@@ -182,6 +186,10 @@ export class BarComponent implements OnInit {
       return this.model.actions && this.model.actions.length > 0;
     }
 
+    get isBackDrop(): boolean {
+      return this.model.options && this.model.options.isBackDrop;
+    }
+
     /**
      * Lets auto close the snack bar based on closeTimeOut.
      */
@@ -198,5 +206,26 @@ export class BarComponent implements OnInit {
 
         const className: string = this.barPanelCtrl.nativeElement.className;
         this.barPanelCtrl.nativeElement.className = `${className} ${this.panelClass}`;
+    }
+
+    private addBackDrop(): void {
+      if (!this.isBackDrop) { return; }
+
+      this.backDropDiv = document.createElement('div');
+      this.backDropDiv.id = `${this.model.id}-snackBarBackDrop`;
+      this.backDropDiv.style.height = '100%';
+      this.backDropDiv.style.width = '100%';
+      this.backDropDiv.style.background = 'rgba(17, 17, 17, 0.5)';
+      this.backDropDiv.style.position = 'fixed';
+      this.backDropDiv.style.top = '0';
+      this.backDropDiv.style.left = '0';
+      this.backDropDiv.style.zIndex = '99999';
+      document.body.appendChild(this.backDropDiv);
+    }
+
+    private removeBackDrop(): void {
+      if (!this.isBackDrop) { return; }
+
+      document.body.removeChild(this.backDropDiv);
     }
 }

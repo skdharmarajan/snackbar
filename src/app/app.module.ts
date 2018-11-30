@@ -6,6 +6,7 @@ import {AppComponent} from './app.component';
 
 import {StoreModule} from "@ngrx/store";
 import {GroupRuleType, PositionType, SnackBarModule, TemplateType} from "ng7-snack-bar";
+import {StoreDevtoolsModule} from "@ngrx/store-devtools";
 
 @NgModule({
   declarations: [
@@ -17,8 +18,11 @@ import {GroupRuleType, PositionType, SnackBarModule, TemplateType} from "ng7-sna
     SnackBarModule.forRoot({
       template: TemplateType.DARK,
       groupRuleType: GroupRuleType.BASED_ON_TYPE,
+      warnOptions: {
+      }
     }),
-    StoreModule.forRoot([])
+    StoreModule.forRoot([]),
+    StoreDevtoolsModule.instrument()
   ],
   providers: [],
   bootstrap: [AppComponent]

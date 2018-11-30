@@ -6,7 +6,7 @@ $button-color-hover-end: rgba(97, 95, 95, 0.78);
 /* Ripple effect */
 .ripple {
   background-position: center;
-  transition: background 0.7s;
+  transition: background 0.5s;
 }
 .ripple:hover {
   background: $button-color-hover-begin radial-gradient(circle, transparent 1%, $button-color-hover-end 1%) center/15000%;

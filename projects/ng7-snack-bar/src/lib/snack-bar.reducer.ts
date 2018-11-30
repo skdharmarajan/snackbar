@@ -23,6 +23,7 @@ export function snackBarReducer(state: ISnackBarState = INITIAL_SNACK_BAR_STATE,
                     count: 1,
                     closeTimeOut: 1,
                     actions: (action.actions && action.actions.length > 3) ? action.actions.slice(0, 3) : action.actions,
+                    options: action.options,
                 })],
                 options: state.options,
             };
