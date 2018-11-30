@@ -15,6 +15,10 @@
       <div>ACTIONS</div>
       <img src="https://skdharmarajan.github.io/snackbar/src/assets/img/Dark_Action.png" width="300" />
   </div>
+   <div>
+        <div>BACKDROP</div>
+        <img src="https://skdharmarajan.github.io/snackbar/src/assets/img/Dark_BackDrop.png" width="300" />
+    </div>
 </div>
 
 # Snackbar For ANGULAR 4/5/6/7
@@ -72,7 +76,7 @@
 
    showNotification(): void {
     // Info
-    this.snackBarService.info('title', 'content', 'detail');
+    this.snackBarService.info('title', 'content', 'detail',);
     // Success
     this.snackBarService.success('title', 'content', 'detail');
     // Warn
@@ -115,6 +119,7 @@
   |                               | content           | string             | Snack bar content                               |
   |                               | detail            | string             | Snack bar detail                                |
   |                               | actions           | ISnackBarAction[]  | max-3 label, isAutoClose, callBack: () => {}    |
+  |                               | options           | ISnackBarConfig    | isBackDrop                                      |
   
 
 

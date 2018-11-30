@@ -7,7 +7,7 @@ import {
   ISNACKBAR_OPTIONS,
   ISnackBarAction,
   ISnackBarOptions,
-  ISnackBarState
+  ISnackBarState, ISnackBarConfig
 } from './snack-bar.model';
 
 const TIMEOUT = 100;
@@ -28,11 +28,11 @@ export class SnackBarService {
    * @param detail
    * @param actions - cannot be more than 3 actions.
    */
-    public info(title: string, content: string, detail?: string, actions?: ISnackBarAction[]): void {
+    public info(title: string, content: string, detail?: string, actions?: ISnackBarAction[], config?: ISnackBarConfig): void {
         this.setTimeOutOnEvents(TIMEOUT,
             () => this.store$.dispatch({
               type: SnackBarType.SHOW_SNACKBAR, title, content, detail, barType: BarType.INFO,
-              actions,
+              actions, options: config,
             }));
     }
 
@@ -43,11 +43,11 @@ export class SnackBarService {
    * @param detail
    * @param actions - cannot be more than 3 actions.
    */
-    public success(title: string, content: string, detail?: string, actions?: ISnackBarAction[]): void {
+    public success(title: string, content: string, detail?: string, actions?: ISnackBarAction[], config?: ISnackBarConfig): void {
         this.setTimeOutOnEvents(TIMEOUT,
             () => this.store$.dispatch({
               type: SnackBarType.SHOW_SNACKBAR, title, content, detail, barType: BarType.SUCCESS,
-              actions,
+              actions, options: config,
             }));
     }
 
@@ -58,11 +58,11 @@ export class SnackBarService {
    * @param detail
    * @param actions - cannot be more than 3 actions.
    */
-    public warn(title: string, content: string, detail?: string, actions?: ISnackBarAction[]): void {
+    public warn(title: string, content: string, detail?: string, actions?: ISnackBarAction[], config?: ISnackBarConfig): void {
         this.setTimeOutOnEvents(TIMEOUT,
             () => this.store$.dispatch({
               type: SnackBarType.SHOW_SNACKBAR, title, content, detail, barType: BarType.WARN,
-              actions,
+              actions, options: config,
             }));
     }
 
@@ -73,11 +73,11 @@ export class SnackBarService {
    * @param detail
    * @param actions - cannot be more than 3 actions.
    */
-    public error(title: string, content: string, detail?: string, actions?: ISnackBarAction[]): void {
+    public error(title: string, content: string, detail?: string, actions?: ISnackBarAction[], config?: ISnackBarConfig): void {
         this.setTimeOutOnEvents(TIMEOUT,
             () => this.store$.dispatch({
               type: SnackBarType.SHOW_SNACKBAR, title, content, detail, barType: BarType.ERROR,
-              actions,
+              actions, options: config,
             }));
     }
 

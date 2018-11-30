@@ -17,9 +17,9 @@ export class AppComponent {
   showNotification(): void {
     // // Success
     // @ts-ignore
-    this.snackBarService.warn(
-      'Warn',
-      'Introducing Actions. Max of 3 actions, with autoClose and callBack feature',
+    this.snackBarService.info(
+      'Info',
+      'Introducing BackDrop.',
        null,
         [{
           label: 'Close',
@@ -28,7 +28,13 @@ export class AppComponent {
           {
             label: 'Confirm',
             isAutoClose: false,
-          }]
+            callback: () => {
+              alert('Clicked on confirm')
+            }
+          }],
+      {
+        isBackDrop: true,
+      }
     );
 
   }
