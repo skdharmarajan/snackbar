@@ -1,0 +1,30 @@
+$button-color: rgba(72, 73, 74, 0.2);
+$ripple-active-color: rgb(119, 119, 119);
+$button-color-hover-begin: rgba(92, 92, 93, 0.65);
+$button-color-hover-end: rgba(97, 95, 95, 0.78);
+
+/* Ripple effect */
+.ripple {
+  background-position: center;
+  transition: background 0.7s;
+}
+.ripple:hover {
+  background: $button-color-hover-begin radial-gradient(circle, transparent 1%, $button-color-hover-end 1%) center/15000%;
+}
+.ripple:active {
+  background-color: $ripple-active-color;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+/* Button style */
+button {
+  border: none;
+  border-radius: 3px;
+  padding: 6px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  color: white;
+  background-color: $button-color;
+  outline: none;
+}

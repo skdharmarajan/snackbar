@@ -46,6 +46,9 @@
         </div>
       </div>
     </div>
+    <div class="actions" *ngIf="hasActions">
+      <sb-button *ngFor="let action of model.actions" (click)="onAction(action)">{{action.label}}</sb-button>
+    </div>
     <div @showContentTrigger class="detail" *ngIf="isShowContent" [ngClass]="{
         'success-t-b': isSuccess, 
         'warn-t-b': isWarn, 

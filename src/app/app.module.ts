@@ -17,10 +17,6 @@ import {GroupRuleType, PositionType, SnackBarModule, TemplateType} from "ng7-sna
     SnackBarModule.forRoot({
       template: TemplateType.DARK,
       groupRuleType: GroupRuleType.BASED_ON_TYPE,
-      errorOptions: {
-        isClose: true,
-        isDetail: true,
-      }
     }),
     StoreModule.forRoot([])
   ],

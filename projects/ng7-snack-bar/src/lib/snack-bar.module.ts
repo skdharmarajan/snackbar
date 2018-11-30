@@ -17,9 +17,11 @@ import { InfoIconComponent } from './icons/info.icon';
 import { SuccessIconComponent } from './icons/success.icon';
 import { WarnIconComponent } from './icons/warn.icon';
 import { SquareIconComponent } from './icons/square.icon';
+import { ButtonComponent } from './button/button.component';
 
 @NgModule({
     declarations: [
+        ButtonComponent,
         BarComponent,
         ContainerComponent,
         CloseIconComponent,

@@ -1,9 +1,10 @@
 import {Component, ElementRef, Input, OnInit, ViewChild, ViewEncapsulation} from '@angular/core';
 import {Store} from '@ngrx/store';
 import {BarType, SnackBarType, TemplateType} from '../snack-bar.enum';
-import {IBarOptions, ISnackBar, ISnackBarOptions, ISnackBarState} from '../snack-bar.model';
+import {IBarOptions, ISnackBar, ISnackBarAction, ISnackBarOptions, ISnackBarState} from '../snack-bar.model';
 import {SnackBarService} from '../snack-bar.service';
 import {ACCORDION_ANIMATION} from '../animations/animations';
+import {isNullOrUndefined} from "util";
 
 @Component({
     selector: 'sb-bar',
@@ -38,6 +39,21 @@ export class BarComponent implements OnInit {
 
     onToggleDetail(): void {
         this.isShowContent = !this.isShowContent;
+    }
+
+    onAction(action: ISnackBarAction): void {
+        this.autoCloseOnAction(action.isAutoClose);
+        this.executeCallBack(action.callback);
+    }
+
+    private autoCloseOnAction(isAutoClose: boolean): void {
+      if (!isAutoClose) { return; }
+      this.onClose();
+    }
+
+    private executeCallBack(callBack: any): void {
+      if (!callBack) { return; }
+      callBack();
     }
 
     get getBannerClass(): string {
@@ -160,6 +176,10 @@ export class BarComponent implements OnInit {
 
     get panelClass(): string {
         return this.barOptions.panelClass;
+    }
+
+    get hasActions(): boolean {
+      return this.model.actions && this.model.actions.length > 0;
     }
 
     /**

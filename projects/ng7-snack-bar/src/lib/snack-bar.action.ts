@@ -1,10 +1,11 @@
 import { Action } from '@ngrx/store';
 import { BarType } from './snack-bar.enum';
-import { ISnackBar, ISnackBarOptions } from './snack-bar.model';
+import {ISnackBar, ISnackBarAction, ISnackBarOptions} from './snack-bar.model';
 
 export class ShowSnackBarAction implements Action {
     readonly type = 'SHOW_SNACKBAR';
-    constructor(public title: string, public content: string, public detail: string, public barType: BarType) { }
+    constructor(public title: string, public content: string, public detail: string, public barType: BarType,
+                public actions: ISnackBarAction[]) { }
 }
 
 export class SetSnackBarOptionsAction implements Action {
