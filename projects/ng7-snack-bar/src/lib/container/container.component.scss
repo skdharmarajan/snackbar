@@ -1,4 +1,4 @@
-#container {
+#snackBarContainer {
     position: fixed;
     z-index: 999999;
     padding: 15px;
@@ -9,22 +9,22 @@
     justify-items: start;
 }
 
-.bottom-right {
+.snack-bar-bottom-right {
     bottom: 0;
     right: 0;
 }
 
-.bottom-left {
+.snack-bar-bottom-left {
     bottom: 0;
     left: 0;
 }
 
-.top-left {
+.snack-bar-top-left {
     top: 0;
     left: 0;
 }
 
-.top-right {
+.snack-bar-top-right {
     top: 0;
     right: 0;
 }
