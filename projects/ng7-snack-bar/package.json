@@ -1,6 +1,6 @@
 {
   "name": "ng7-snack-bar",
-  "version": "1.7.5",
+  "version": "1.7.6",
   "homepage": "https://github.com/skdharmarajan/snackbar",
   "description": "SnackBar is a service for displaying snack-bar notifications. On latest version of angular 7",
   "author": {

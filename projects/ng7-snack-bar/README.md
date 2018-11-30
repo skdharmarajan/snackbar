@@ -7,11 +7,13 @@
     <div>CLASSIC</div>
     <img src="https://skdharmarajan.github.io/snackbar/src/assets/img/Classic_Info.png" width="300" />
   </div>
-</div>
-<div style="display: flex; flex-direction:row">
   <div>
-    <div>DETAIL WITH TYPE GROUPING</div>
-    <img src="https://skdharmarajan.github.io/snackbar/src/assets/img/Dark_Error.png" width="300" />
+      <div>DETAIL WITH TYPE GROUPING</div>
+      <img src="https://skdharmarajan.github.io/snackbar/src/assets/img/Dark_Error.png" width="300" />
+  </div>
+  <div>
+      <div>ACTIONS</div>
+      <img src="https://skdharmarajan.github.io/snackbar/src/assets/img/Dark_Action.png" width="300" />
   </div>
 </div>
 
@@ -105,6 +107,15 @@
   | isDetail               | boolean           | false                           | Shows/Hides the detail button             |
   | panelClass             | string            |                                 | Overrides the specific snackbar class     |
   | opacity                | number            | 1                               | Specifies the opacity of snackbar         |
+ 
+ # Service Details
+  | SERVICE                       | ARGUMENTS         | TYPE               | DESCRIPTION                                     |
+  |-------------------------------|-------------------|--------------------|-------------------------------------------------|
+  | info, warn, success, error    | title             | string             | Snack bar title, default 'Info'                 |
+  |                               | content           | string             | Snack bar content                               |
+  |                               | detail            | string             | Snack bar detail                                |
+  |                               | actions           | ISnackBarAction[]  | max-3 label, isAutoClose, callBack: () => {}    |
+  
 
 
 # Live

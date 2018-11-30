@@ -2,7 +2,13 @@ import { Inject, Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable, Subscription } from 'rxjs';
 import {BarType, SnackBarType} from './snack-bar.enum';
-import { INITIAL_ISNACKBAR_OPTIONS, ISNACKBAR_OPTIONS, ISnackBarOptions, ISnackBarState } from './snack-bar.model';
+import {
+  INITIAL_ISNACKBAR_OPTIONS,
+  ISNACKBAR_OPTIONS,
+  ISnackBarAction,
+  ISnackBarOptions,
+  ISnackBarState
+} from './snack-bar.model';
 
 const TIMEOUT = 100;
 
@@ -15,26 +21,69 @@ export class SnackBarService {
         this.config();
     }
 
-    public info(title: string, content: string, detail?: string): void {
+  /**
+   * Displays the info snack bar.
+   * @param title
+   * @param content
+   * @param detail
+   * @param actions - cannot be more than 3 actions.
+   */
+    public info(title: string, content: string, detail?: string, actions?: ISnackBarAction[]): void {
         this.setTimeOutOnEvents(TIMEOUT,
-            () => this.store$.dispatch({ type: SnackBarType.SHOW_SNACKBAR, title, content, detail, barType: BarType.INFO }));
+            () => this.store$.dispatch({
+              type: SnackBarType.SHOW_SNACKBAR, title, content, detail, barType: BarType.INFO,
+              actions,
+            }));
     }
 
-    public success(title: string, content: string, detail?: string): void {
+  /**
+   * Displays the success snack bar.
+   * @param title
+   * @param content
+   * @param detail
+   * @param actions - cannot be more than 3 actions.
+   */
+    public success(title: string, content: string, detail?: string, actions?: ISnackBarAction[]): void {
         this.setTimeOutOnEvents(TIMEOUT,
-            () => this.store$.dispatch({ type: SnackBarType.SHOW_SNACKBAR, title, content, detail, barType: BarType.SUCCESS }));
+            () => this.store$.dispatch({
+              type: SnackBarType.SHOW_SNACKBAR, title, content, detail, barType: BarType.SUCCESS,
+              actions,
+            }));
     }
 
-    public warn(title: string, content: string, detail?: string): void {
+  /**
+   * Displays the warn snack bar.
+   * @param title
+   * @param content
+   * @param detail
+   * @param actions - cannot be more than 3 actions.
+   */
+    public warn(title: string, content: string, detail?: string, actions?: ISnackBarAction[]): void {
         this.setTimeOutOnEvents(TIMEOUT,
-            () => this.store$.dispatch({ type: SnackBarType.SHOW_SNACKBAR, title, content, detail, barType: BarType.WARN }));
+            () => this.store$.dispatch({
+              type: SnackBarType.SHOW_SNACKBAR, title, content, detail, barType: BarType.WARN,
+              actions,
+            }));
     }
 
-    public error(title: string, content: string, detail?: string): void {
+  /**
+   * Displays the error snack bar.
+   * @param title
+   * @param content
+   * @param detail
+   * @param actions - cannot be more than 3 actions.
+   */
+    public error(title: string, content: string, detail?: string, actions?: ISnackBarAction[]): void {
         this.setTimeOutOnEvents(TIMEOUT,
-            () => this.store$.dispatch({ type: SnackBarType.SHOW_SNACKBAR, title, content, detail, barType: BarType.ERROR }));
+            () => this.store$.dispatch({
+              type: SnackBarType.SHOW_SNACKBAR, title, content, detail, barType: BarType.ERROR,
+              actions,
+            }));
     }
 
+  /**
+   * Clears all the snack bars.
+   */
     public clearAll(): void {
         this.store$.dispatch({ type: SnackBarType.CLEAR_SNACKBAR });
     }

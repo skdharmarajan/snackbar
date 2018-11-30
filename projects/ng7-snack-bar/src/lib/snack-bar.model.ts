@@ -32,12 +32,19 @@ export interface ISnackBar {
     type: BarType;
     count: number;
     closeTimeOut: number;
+    actions: ISnackBarAction[];
 }
 
 export interface ISnackBarState {
     currentUrl: string;
     snackBars: ISnackBar[];
     options: ISnackBarOptions;
+}
+
+export interface ISnackBarAction {
+    label?: string;
+    callback?: any;
+    isAutoClose?: boolean;
 }
 
 
