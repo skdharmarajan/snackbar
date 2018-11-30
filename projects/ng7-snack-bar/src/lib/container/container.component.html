@@ -1,8 +1,7 @@
-<div [ngClass]="{
-'bottom-right': snackBarOptions.position === 'BOTTOM_RIGHT',
-'top-left': snackBarOptions.position === 'TOP_LEFT', 
-'top-right': snackBarOptions.position === 'TOP_RIGHT', 
-'bottom-left': snackBarOptions.position === 'BOTTOM_LEFT'}"
-    id="container">
+<div id="snackBarContainer" [ngClass]="{
+'snack-bar-bottom-right': snackBarOptions.position === 'BOTTOM_RIGHT',
+'snack-bar-top-left': snackBarOptions.position === 'TOP_LEFT', 
+'snack-bar-top-right': snackBarOptions.position === 'TOP_RIGHT', 
+'snack-bar-bottom-left': snackBarOptions.position === 'BOTTOM_LEFT'}">
         <sb-bar @insertRemoveTrigger *ngFor="let snackBar of (snackBarService.snackBarState$ | async).snackBars" [model]="snackBar"></sb-bar>
 </div>

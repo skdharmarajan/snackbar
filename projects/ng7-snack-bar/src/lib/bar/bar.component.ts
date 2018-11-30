@@ -20,7 +20,7 @@ export class BarComponent implements OnInit {
     private snackBarOptions: ISnackBarOptions;
     private backDropDiv: any;
 
-    @ViewChild('barPanel') barPanelCtrl: ElementRef;
+    @ViewChild('snackBarPanel') barPanelCtrl: ElementRef;
     constructor(
         private store$: Store<ISnackBarState>,
         private snackBarService: SnackBarService,
