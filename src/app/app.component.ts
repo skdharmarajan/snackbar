@@ -19,22 +19,12 @@ export class AppComponent {
     // @ts-ignore
     this.snackBarService.info(
       'Info',
-      'Introducing BackDrop.',
-       null,
-        [{
-          label: 'Close',
-          isAutoClose: true,
-        },
-          {
-            label: 'Confirm',
-            isAutoClose: false,
-            callback: () => {
-              alert('Clicked on confirm')
-            }
-          }],
-      {
-        isBackDrop: true,
-      }
+      'Introducing BackDrop.'
+    );
+
+    this.snackBarService.warn(
+      'Info',
+      'Introducing BackDrop.'
     );
 
   }

@@ -1,15 +1,20 @@
 <div class="snackBarPanel" #snackBarPanel [ngStyle]="{'opacity': opacity}" [ngClass]="{
-    'snack-bar-success-b': isSuccess, 
-    'snack-bar-warn-b': isWarn, 
-    'snack-bar-error-b': isError, 
+    'snack-bar-success-b': isSuccess,
+    'snack-bar-warn-b': isWarn,
+    'snack-bar-error-b': isError,
     'snack-bar-info-b': isInfo,
     'snack-bar-bg-warn': isWarnDark,
     'snack-bar-bg-success': isSuccessDark,
     'snack-bar-bg-error': isErrorDark,
     'snack-bar-bg-info': isInfoDark
     }">
-    <div class="bar-container">
-      <div class="bar-icon-h">
+    <div class="bar-container" >
+      <div class="bar-icon-h" [ngClass]="{
+    'snack-bar-bg-warn': isWarn,
+    'snack-bar-bg-success': isSuccess,
+    'snack-bar-bg-error': isError,
+    'snack-bar-bg-info': isInfo
+    }">
         <div class="bar-icon">
           <sb-error-icon *ngIf="isError"></sb-error-icon>
           <sb-warn-icon *ngIf="isWarn"></sb-warn-icon>
