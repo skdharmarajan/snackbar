@@ -24,12 +24,6 @@ $info-color: #0D62B4;
     height: 100%;
   }
   
-  .bar:hover {
-          box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4), 0 2px 5px 0 rgba(0, 0, 0, 0.4);
-          cursor: pointer;
-      }
-  
-  
   .header {
       font-size: 14px;
       font-weight: 600;
@@ -237,7 +231,10 @@ $info-color: #0D62B4;
 
 }
 
-
+.snackBarPanel:hover {
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4), 0 2px 5px 0 rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
 
 .snack-bar-bg-warn {
     background: $warn-color;

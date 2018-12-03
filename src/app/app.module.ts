@@ -5,7 +5,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 
 import {StoreModule} from "@ngrx/store";
-import {GroupRuleType, PositionType, SnackBarModule, TemplateType} from "ng7-snack-bar";
+import {SnackBarModule, TemplateType} from "ng7-snack-bar";
 import {StoreDevtoolsModule} from "@ngrx/store-devtools";
 
 @NgModule({
@@ -15,12 +15,11 @@ import {StoreDevtoolsModule} from "@ngrx/store-devtools";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SnackBarModule.forRoot({
-      template: TemplateType.DARK,
-      groupRuleType: GroupRuleType.BASED_ON_TYPE,
-      warnOptions: {
+    SnackBarModule.forRoot(
+      {
+        template: TemplateType.CLASSIC
       }
-    }),
+    ),
     StoreModule.forRoot([]),
     StoreDevtoolsModule.instrument()
   ],
